@@ -1,0 +1,422 @@
+/* Star Wars Space Battle Simulator CSS */
+/* Import Star Wars inspired fonts */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Share+Tech+Mono&display=swap');
+
+/* Reset en basisstijlen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Share Tech Mono', monospace;
+    background-color: #000;
+    color: #ffe81f; /* Star Wars geel */
+    background-image: 
+        radial-gradient(white, rgba(255,255,255,.2) 2px, transparent 4px),
+        radial-gradient(white, rgba(255,255,255,.15) 1px, transparent 3px),
+        radial-gradient(white, rgba(255,255,255,.1) 2px, transparent 4px);
+    background-size: 550px 550px, 350px 350px, 250px 250px;
+    background-position: 0 0, 40px 60px, 130px 270px;
+    overflow-x: hidden;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header stijlen */
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    text-shadow: 0 0 10px #ffe81f, 0 0 20px #ffe81f, 0 0 30px #ffe81f;
+    margin-bottom: 30px;
+    transform: perspective(500px) rotateX(25deg);
+    color: #ffe81f;
+    padding: 20px 0;
+    border-bottom: 2px solid #4bd5ee;
+}
+
+h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #4bd5ee;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 5px #4bd5ee;
+}
+
+/* Menu containers */
+.menu {
+    background: rgba(0, 0, 0, 0.85);
+    border: 2px solid #4bd5ee;
+    border-radius: 8px;
+    padding: 30px;
+    margin: 25px 0;
+    box-shadow: 0 0 20px rgba(75, 213, 238, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.menu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #ffe81f, #4bd5ee, #ffe81f);
+}
+
+/* Form stijlen */
+.form-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #4bd5ee;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 2px solid #ffe81f;
+    border-radius: 5px;
+    color: #fff;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #4bd5ee;
+    box-shadow: 0 0 15px rgba(75, 213, 238, 0.6);
+    background: rgba(0, 0, 0, 0.9);
+}
+
+/* Button stijlen */
+.button {
+    background: transparent;
+    border: 2px solid #ffe81f;
+    color: #ffe81f;
+    padding: 15px 30px;
+    margin: 10px 15px 10px 0;
+    cursor: pointer;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 500;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+.button:hover {
+    background-color: #ffe81f;
+    color: #000;
+    box-shadow: 0 0 20px #ffe81f;
+    transform: translateY(-2px);
+}
+
+.button:active {
+    transform: translateY(0);
+}
+
+/* Stats section */
+.stats {
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid #ffe81f;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 20px 0;
+    box-shadow: 0 0 15px rgba(255, 232, 31, 0.3);
+}
+
+.stats h3 {
+    color: #ffe81f;
+    border-bottom: 1px solid #4bd5ee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.stats pre {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid #4bd5ee;
+    border-radius: 5px;
+    padding: 15px;
+    color: #fff;
+    font-family: 'Share Tech Mono', monospace;
+    margin: 15px 0;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.stats p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    color: #4bd5ee;
+}
+
+.stats strong {
+    color: #ffe81f;
+}
+
+/* Message stijlen */
+.message {
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #4bd5ee;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    color: #fff;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    box-shadow: 0 0 15px rgba(75, 213, 238, 0.4);
+    position: relative;
+}
+
+.message::before {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    font-size: 1.5rem;
+}
+
+/* Enemy selection */
+.enemy {
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #ffe81f;
+    border-radius: 5px;
+    padding: 15px;
+    margin: 12px 0;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.enemy:hover {
+    background: rgba(255, 232, 31, 0.1);
+    border-color: #4bd5ee;
+    transform: translateX(5px);
+}
+
+.enemy input[type="radio"] {
+    margin-right: 15px;
+    transform: scale(1.3);
+}
+
+.enemy label {
+    color: #fff;
+    text-transform: none;
+    letter-spacing: normal;
+    font-size: 1.1rem;
+    margin: 0;
+    cursor: pointer;
+    flex: 1;
+}
+
+/* Radio button styling */
+input[type="radio"] {
+    accent-color: #4bd5ee;
+}
+
+/* Special effects */
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Battle log styling */
+pre {
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #4bd5ee;
+    border-radius: 5px;
+    padding: 15px;
+    color: #fff;
+    font-family: 'Share Tech Mono', monospace;
+    margin: 15px 0;
+    white-space: pre-wrap;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* Scrollbar styling */
+pre::-webkit-scrollbar {
+    width: 8px;
+}
+
+pre::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+pre::-webkit-scrollbar-thumb {
+    background: #4bd5ee;
+    border-radius: 4px;
+}
+
+pre::-webkit-scrollbar-thumb:hover {
+    background: #ffe81f;
+}
+
+/* Imperial vs Rebel thema */
+.imperial {
+    border-color: #ff4444;
+    box-shadow: 0 0 15px rgba(255, 68, 68, 0.4);
+}
+
+.rebel {
+    border-color: #4bd5ee;
+    box-shadow: 0 0 15px rgba(75, 213, 238, 0.4);
+}
+
+.jedi {
+    border-color: #00ff00;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.4);
+}
+
+.sith {
+    border-color: #ff0000;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2.5rem;
+        letter-spacing: 4px;
+    }
+    
+    h3 {
+        font-size: 1.4rem;
+    }
+    
+    .menu {
+        padding: 20px;
+        margin: 15px 0;
+    }
+    
+    .button {
+        width: 100%;
+        margin: 5px 0;
+        padding: 12px 20px;
+    }
+    
+    .stats {
+        padding: 15px;
+    }
+    
+    input[type="text"] {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 2rem;
+        letter-spacing: 3px;
+    }
+    
+    h3 {
+        font-size: 1.2rem;
+    }
+    
+    .menu {
+        padding: 15px;
+    }
+}
+
+/* Starfield animation */
+@keyframes twinkle {
+    0% { opacity: 0.2; }
+    50% { opacity: 1; }
+    100% { opacity: 0.2; }
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    animation: twinkle 3s infinite;
+}
+
+/* Lightsaber effect voor knoppen */
+.button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: 0.5s;
+}
+
+.button:hover::after {
+    left: 100%;
+}
+
+/* Speciale styling voor vernietigde schepen */
+.destroyed {
+    opacity: 0.6;
+    border-color: #ff4444 !important;
+    background: rgba(255, 68, 68, 0.1) !important;
+}
+
+/* Victory en defeat messages */
+.victory {
+    border-color: #00ff00;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
+    background: rgba(0, 255, 0, 0.1);
+}
+
+.defeat {
+    border-color: #ff0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.6);
+    background: rgba(255, 0, 0, 0.1);
+}
+
+/* Credit display styling */
+.credits {
+    color: #ffe81f;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-shadow: 0 0 5px #ffe81f;
+}
+
+/* Level display */
+.level {
+    color: #4bd5ee;
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-shadow: 0 0 5px #4bd5ee;
+}
